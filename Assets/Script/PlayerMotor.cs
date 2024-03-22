@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMotor : MonoBehaviour
 {
@@ -14,16 +15,22 @@ public class PlayerMotor : MonoBehaviour
     public float gravity = -9.8f;
 
     public float jumpHeight = 3f;
+
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         IsGrounded = controller.isGrounded;
+        var velocity = Vector3.forward * Time.deltaTime * Input.GetAxis("Vertical") * speed;
+        transform.Translate(velocity);
+        animator.SetFloat("Speed",velocity.magnitude);
     }
 
     public void ProcessMove(Vector2 input)
