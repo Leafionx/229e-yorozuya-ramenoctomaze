@@ -13,5 +13,6 @@ public class Ramen : MonoBehaviour
             playerInventory.RamenCollected();
             gameObject.SetActive(false);
         }
+
     }
 }
