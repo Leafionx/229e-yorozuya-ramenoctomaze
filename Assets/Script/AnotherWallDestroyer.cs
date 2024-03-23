@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class AnotherWallDestroyer : MonoBehaviour
 {
-    public int ramenNeeded = 1;
+    public int ramenNeeded = 0;
     public string textObjectName = "Intro";
+    private PlayerInventory playerInventory;
+    private bool wallDestroyed = false;
 
     void Start()
     {
-        PlayerInventory playerInventory = GameObject.FindObjectOfType<PlayerInventory>();
+        playerInventory = GameObject.FindObjectOfType<PlayerInventory>();
         
         if (playerInventory != null)
         {
@@ -20,7 +22,6 @@ public class AnotherWallDestroyer : MonoBehaviour
 
     void OnDestroy()
     {
-        PlayerInventory playerInventory = GameObject.FindObjectOfType<PlayerInventory>();
         if (playerInventory != null)
         {
             playerInventory.OnRamenCollected.RemoveListener(CheckRamenCount);
@@ -29,9 +30,10 @@ public class AnotherWallDestroyer : MonoBehaviour
 
     void CheckRamenCount(PlayerInventory playerInventory)
     {
-        if (playerInventory.NumberOfRamens >= ramenNeeded)
+        if (!wallDestroyed && playerInventory.NumberOfRamens == 0)
         {
             Destroy(gameObject);
+            wallDestroyed = true; // ตั้งค่าให้กำแพงถูกทำลายไปแล้ว
             
             GameObject textObject = GameObject.Find(textObjectName);
             

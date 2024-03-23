@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private float health;
+   private float health;
 
     private float lerpTimer;
 
@@ -62,11 +62,26 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= damage;
         lerpTimer = 0f;
+        if (health <= 0f)
+        {
+            Die();
+        }
     }
 
     public void RestoreHealth(float healAmount)
     {
         health += healAmount;
         lerpTimer = 0f;
+    }
+    void Die()
+    {
+        RestartGame();
+    }
+
+    void RestartGame()
+    {
+        Debug.Log("Player has died. Restarting game...");
+        // โหลดซีนใหม่ เมื่อต้องการเริ่มเกมใหม่
+        Application.LoadLevel(Application.loadedLevel);
     }
 }

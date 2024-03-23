@@ -46,7 +46,7 @@ public class TrapActive : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            playerHealth.TakeDamage(10);
+            playerHealth.TakeDamage(30);
         }
         if (collision.gameObject.CompareTag("Wall"))
         {

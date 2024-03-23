@@ -13,7 +13,14 @@ public class InventoryUI : MonoBehaviour
 
     public void UpdateRamenText(PlayerInventory playerInventory)
     {
-        ramenText.text = playerInventory.NumberOfRamens.ToString();
+        if (playerInventory.NumberOfRamens >= 0)
+        {
+            ramenText.text = playerInventory.NumberOfRamens.ToString();
+        }
+        else
+        {
+            ramenText.text = "0";
+        }
     }
 
 }
