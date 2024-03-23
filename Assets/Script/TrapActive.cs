@@ -33,7 +33,8 @@ public class TrapActive : MonoBehaviour
         }
         else
         {
-            rb.MovePosition(Vector3.MoveTowards(rb.position, initialPosition, rollSpeed * Time.deltaTime));
+            rb.MovePosition(Vector3.MoveTowards(rb.position, initialPosition, 
+                rollSpeed * Time.deltaTime));
             
             if (Vector3.Distance(rb.position, initialPosition) < 0.1f)
             {
