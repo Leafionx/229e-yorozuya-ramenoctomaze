@@ -22,20 +22,13 @@ public class PlayerHealth : MonoBehaviour
     {
         health = maxHealth;
     }
-
+    
     // Update is called once per frame
     void Update()
     {
         health = Mathf.Clamp(health, 0, maxHealth);
         UpdateHealthUI();
-        /*if (Input.GetKeyDown(KeyCode.A))
-        {
-            TakeDamage(Random.Range(5,10));
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            RestoreHealth(Random.Range(5,10));
-        }*/
+        
     }
 
     public void UpdateHealthUI()

@@ -10,13 +10,9 @@ public class WallDestroyer : MonoBehaviour
         PlayerInventory playerInventory = GameObject.FindObjectOfType<PlayerInventory>();
         if (playerInventory != null)
         {
-            // เชื่อมเหตุการณ์ OnWallDestroyed จาก PlayerInventory
             playerInventory.OnWallDestroyed.AddListener(DestroyWall);
         }
-        else
-        {
-            Debug.LogError("PlayerInventory not found!");
-        }
+        
     }
 
     void OnDestroy()

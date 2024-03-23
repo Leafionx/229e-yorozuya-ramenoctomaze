@@ -14,7 +14,7 @@ public class PlayerInventory : MonoBehaviour
         NumberOfRamens++;
         OnRamenCollected.Invoke(this);
         
-        if (NumberOfRamens >= 1)
+        if (NumberOfRamens >= 10)
         {
             DestroyWalls();
         }
