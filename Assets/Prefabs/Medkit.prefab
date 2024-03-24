@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7364163981240290654}
+  - component: {fileID: 9168080207021849959}
   - component: {fileID: 5880891370268443387}
   - component: {fileID: 8537110493235656241}
   - component: {fileID: -3985753153822589733}
-  - component: {fileID: 1633879767}
   m_Layer: 0
   m_Name: Medkit
   m_TagString: Untagged
@@ -35,6 +35,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9168080207021849959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7888358981939075044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9608835e2b06b314d84391ecdf284612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healAmount: 15
 --- !u!33 &5880891370268443387
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -93,21 +106,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7888358981939075044}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.4, z: 0.2}
+  m_Size: {x: 0.5181401, y: 0.37050837, z: 0.1372274}
   m_Center: {x: 0, y: 0.18524352, z: -0.000000007450581}
---- !u!114 &1633879767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7888358981939075044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9608835e2b06b314d84391ecdf284612, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healAmount: 15
