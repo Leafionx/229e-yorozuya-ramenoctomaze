@@ -81,7 +81,7 @@ public class PlayerHealth : MonoBehaviour
     void RestartGame()
     {
         Debug.Log("Player has died. Restarting game...");
-        // โหลดซีนใหม่ เมื่อต้องการเริ่มเกมใหม่
+        
         Application.LoadLevel(Application.loadedLevel);
     }
 }

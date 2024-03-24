@@ -33,7 +33,7 @@ public class AnotherWallDestroyer : MonoBehaviour
         if (!wallDestroyed && playerInventory.NumberOfRamens == 0)
         {
             Destroy(gameObject);
-            wallDestroyed = true; // ตั้งค่าให้กำแพงถูกทำลายไปแล้ว
+            wallDestroyed = true;
             
             GameObject textObject = GameObject.Find(textObjectName);
             
