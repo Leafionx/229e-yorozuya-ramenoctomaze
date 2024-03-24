@@ -378,9 +378,11 @@ MonoBehaviour:
   m_text: 'Credit
 
 
-    https://www.youtube.com/playlist?list=PLGUw8UNswJEOv8c5ZcoHarbON6mIEUFBC
-
     https://vrcmods.com/
+
+    https://vrcmods.com/item?id=10725
+
+    https://vrcmods.com/item?id=9678
 
 '
   m_isRightToLeft: 0
